@@ -32,6 +32,12 @@
   color: #111;
 }
 
+.product > button:hover {
+  border: 1px solid;
+  border-color: blue;
+  background-color: #ffb700;
+}
+
 .product > img {
   max-height: 200px;
   width: 100%;
