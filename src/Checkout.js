@@ -6,7 +6,7 @@ import Subtotal from "./Subtotal.js";
 
 function Checkout() {
   
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
   if (basket.length==0) {
     return (
@@ -17,6 +17,7 @@ function Checkout() {
           src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
           />
           <div>
+            <h3>Hello, {user?.email}</h3>
           <h2 className="checkout__title">Shopping Cart</h2>
           </div>
             <h2>Your shopping cart is empty</h2>
@@ -36,7 +37,8 @@ function Checkout() {
           className="checkout__ad"
           src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
         />
-        <div>
+          <div>
+          <h3>Hello, {user?.email}</h3>
           <h2 className="checkout__title">Shopping Cart</h2>
 
           {basket.map(item => (
